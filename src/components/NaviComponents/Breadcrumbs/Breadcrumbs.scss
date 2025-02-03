@@ -1,0 +1,12 @@
+.Breadcrumbs {
+  font-size: 14px;
+  color: #f4f0f0;
+  margin-bottom: 10px;
+
+  span {
+    &:not(:last-child)::after {
+      content: ">";
+      margin: 0 5px;
+    }
+  }
+}

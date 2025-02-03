@@ -1,0 +1,11 @@
+.ProgressBar {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  .progress {
+    height: 20px;
+    background-color: #4caf50; /* Kolor wskaźnika postępu */
+    transition: width 0.3s ease; /* Animacja przejścia */
+  }
+}

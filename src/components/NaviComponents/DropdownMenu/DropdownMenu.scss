@@ -1,0 +1,40 @@
+.DropdownMenu {
+    position: relative;
+
+    .dropdown-header {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #141414;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .icon {
+        font-size: 10px;
+        margin-left: 5px;
+      }
+    }
+  
+    .dropdown-options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #141414;
+      border: 1px solid #ccc;
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        padding: 10px;
+        cursor: pointer;
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+}
