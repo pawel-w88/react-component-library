@@ -1,10 +1,19 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import compression from 'vite-plugin-compression';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [compression()],
-  server: {
-    open: true,
-  },
-})
+  plugins: [react(), compression()],
+  build: {
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        }
+      }
+    }
+  }
+});
