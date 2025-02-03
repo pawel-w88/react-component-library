@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import compression from 'vite-plugin-compression';
 
 export default defineConfig({
+  base: '/react-component-library/',
   plugins: [react(), compression()],
   build: {
     chunkSizeWarningLimit: 1000,
